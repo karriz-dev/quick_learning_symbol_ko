@@ -1,31 +1,30 @@
-# 1.Introduction
+# 1.소개
 
-## Abstract
+## 개요
 
-This manual was designed as a practical resource for people looking to learn and leverage the Symbol blockchain's core concepts and native functionality. Unlike most official documents that exhaustively deal with general technology, this document approaches the Symbol blockchain through its usable elements and built-in features, providing a practical overview by detailing key concepts alongside example code and outputs. If read from the beginning, it will provide a holistic understanding of the Symbol blockchain along with all the tools needed to begin application development. For the sake of brevity, this document omits several aspects of the Symbol blockchain and its network including: node management, the consensus algorithm, tokenomics, harvesting rewards, etc.
+해당 매뉴얼 파일은 심볼 블록체인 코어의 컨셉과 네이티브 기능을 쉽고 빠르게 이해하기 위해 설계 되었습니다. 일반적인 기술을 철저히 다루는 대부분의 공식 문서와 달리, 이 문서는 심볼 블록체인의 사용 가능한 요소와 내장된 기능을 통해 접근하며, 코드 및 출력 예제와 함께 주요 개념을 자세히 설명하여 실질적인 개요를 제공합니다. 처음부터 읽으면 Symbol 블록체인에 대한 전체적인 이해와 함께 애플리케이션 개발을 시작하는 데 필요한 모든 도구를 제공합니다. 간략화를 위해, 이 문서에서는 노드 관리, 합의 알고리듬, 토큰 이코노미, 수확 보상 등을 포함한 심볼 블록체인 및 네트워크 등 몇 가지 측면을 생략합니다.
 
-## Target Audience
+## 해당 매뉴얼을 읽기에 적합한 분
 
-- Newcomers to the Blockchain space who are looking to better understand the Symbol blockchain and experiment with it.
-- Blockchain enthusiasts looking for practical use cases with examples
-- Educators & content producers seeking to understand and describe the Symbol blockchain or specific aspects of it
-- Anyone curious about how easy it is to build on Symbol
+- 새롭게 블록체인 공간에 빠졌거나 심볼 블록체인에 대해서 경험하고싶은 경우
+- 실제 예제를 통해 실용적인 활용 사례를 찾는 블록체인 애호가
+- 심볼 블록체인의 전반적인 내용 및 특정 기능에 대해 설명하고자 하는 교육자 및 콘텐츠 제작자
+- 심볼을 사용해 개발하는게 얼마나 쉬운지 궁금한 분
 
-## Taking a practical approach
+## 실용적인 접근 방식 채택
 
-A blockchain's most foundational element is a proof of existence with an associated time stamp, not money or 'cryptocurrency'. With this in focus we can imagine blockchain's applicability in areas such as authentication and traceability. **Trust is a foundational** element upon which society is built, yet we do not inherently trust systems and other individuals. In order to navigate this contradiction, countless solutions have been built around translating that trust into money. Blockchain has introduced the possibility of trustless peer-to-peer interactions, providing a novel opportunity to reframe our relationship with trust and value.
+블록체인의 가장 기본적인 요소는 돈이나 '암호화폐'가 아닌 거래의 정확한 타임스탬프가 있는 존재 증명입니다. 이것에 초점을 맞추면 인증 및 추적 가능성과 같은 영역에서 블록체인의 적용 가능성을 떠올릴 수 있습니다. **신뢰는 사회가 구축**되기 위한 기본 요소이지만, 우리는 본질적으로 시스템이 아닌 다른 개인을 신뢰하지 않습니다. 이러한 모순을 극복하기 위해, 수많은 해결책들이 그 신뢰를 돈으로 바꾸는 것을 중심으로 만들어졌습니다. 블록체인은 신뢰할 수 없는 개인과 개인간의 상호 작용의 가능성을 도입하여 신뢰와 가치로 관계를 재구성할 수 있는 새로운 기회를 제공했습니다.
 
-Blockchain technology has made trustless peer-to-peer interactions possible, eliminating the need for money or a trusted third parties in many scenarios. This document was written in such a way that people who are active in fields of business and culture, not just in finance, can get a sense of how to utilise the power of blockchain within their domain.
+## 실제 유틸리티와 함께 즉시 사용 가능
 
-## Ready-to-use with real-world utility 
+사물인터넷(IoT)과 같은 새로운 기술 발전 분야에서 **"개념 증명(Proof of Concept, PoC)이 더 이상 필요하지 않다"** 는 생각이 점점 더 많이 자리잡고 있습니다. 물리적 및 디지털 모듈화는 장기적인 개선 주기와 코드 검토의 필요성을 대부분 무시하고 실제 애플리케이션에 프로토타입을 그대로 안전하게 배포할 수 있는 수준까지 발전했습니다.
 
-The idea that **"a Proof of Concept (PoC) is no longer needed"** is increasingly taking hold in areas of novel technology advancement such as the Internet of Things (IoT). Physical and digital modularity have progressed to the point where even prototypes can safely deployed in real-world applications as they are, largely bypassing the need for protracted refinement cycles and code review.
-The Symbol blockchain was largely designed around notions of security, scalability, and modularity. Symbol's native functionality for accounts and tokens provides a robust foundation of highly secure information infrastructure. This is furthered by a powerful network of API-enabled nodes and suite of community-developed tools which largely mitigate the need for custom-build applications and self-hosted nodes.
+심볼 블록체인은 주로 보안, 확장성 및 모듈성 개념을 중심으로 설계되었습니다. 계정 및 토큰에 대한 심볼의 기본 기능은 매우 안전한 정보 인프라의 강력한 기반을 제공합니다. 이는 API 지원 노드의 강력한 네트워크와 맞춤형 구축 애플리케이션 및 자체 호스팅 노드의 필요성을 크게 완화하는 커뮤니티 개발 도구 모음에 의해 더욱 확대됩니다.
 
-We hope the possibilities provided by the Symbol blockchain resonate throughout this document will show you these possibilities. Please note that the 'Tips for use in the field' at the end of each chapter requires a cross-sectional understanding of Symbol's functions, so you can skip these at first.
+우리는 심볼 블록체인이 제공하는 가능성이 이 문서 전반에 걸쳐 반향을 일으키며 여러분에게 이러한 가능성을 보여주기를 바랍니다. 각 장의 끝에 있는 '실무에서 사용하기 위한 팁'에는 심볼의 기능에 대한 여러 복잡한 것들에 대한 이해가 필요하므로 처음에는 생략하고 넘어갈 수 있습니다.
 
-## Where Symbol differs from other 'smart' blockchains.
+## 심볼은 다른 '스마트' 블록체인들과 다르다
 
-The Symbol blockchain does not use smart contracts. A suite of 'smart' infrastructure is baked into Symbol's code base, the complex interactions and transactions enabled by this infrastructure provide similar functionality to many common smart contracts deployed on other chains. Symbol's built-in 'smart contracts' can be used at any time but are executed only once with each use, hence they are sometimes described as a deployless one-time smart contract.
+심볼 블록체인은 스마트 계약(Smart Contract)을 사용하지 않습니다. 일련의 '스마트' 인프라가 심볼의 코드 기반에 포함되어 있으며, 이 인프라를 통해 가능한 복잡한 상호 작용 및 트랜잭션은 다른 체인에 구축된 많은 일반적인 스마트 계약과 유사한 기능을 제공합니다. 심볼의 내장형 '스마트 계약'은 언제든지 사용할 수 있지만 사용할 때마다 한 번만 실행되기 때문에 전개되지 않는 "일회성 스마트 계약"으로 표현되기도 합니다.
 
-As a deployless chain, Symbol encourages off-chain applications and contracts that interact with Symbol's many functions. These applications can be written in any common programming language. As deployless one-time smart contracts as they are executed only once, they cannot incur inordinate fees nor network resources due to errors like an infinite loop. This also prevents end users or bad actors from deploying contracts with unintended vulnerabilities or outright malicious code.
+배포가 필요없는 체인인 심볼은 여러 기능과 상호 작용하는 오프체인 애플리케이션 및 계약을 장려합니다. 이러한 응용 프로그램은 모든 공통 프로그래밍 언어로 작성될 수 있습니다. 또한 일회성 스마트 계약은 한 번만 실행되므로 무한 루프와 같은 오류로 인해 과도한 수수료나 네트워크 리소스를 발생시킬 수 없습니다. 이를 통해 최종 사용자 또는 불량 행위자가 의도하지 않은 취약성 또는 노골적인 악성 코드가 있는 계약을 배포하는 것을 방지할 수도 있습니다.

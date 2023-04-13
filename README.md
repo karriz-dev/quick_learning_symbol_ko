@@ -6,6 +6,10 @@
 
 ### XEMBook
 
+## 번역
+
+### Karriz ([GitHub](https://github.com/karriz-dev), [Twitter](https://twitter.com/karriz_))
+
 ## 그외 다른 언어들
 
 [English](https://learn.en.symbol-community.com)
